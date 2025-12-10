@@ -2,7 +2,7 @@ package package23;
 
 public class ArrayQueue {
     static int SIZE = 5;
-    static int[] items = new int[SIZE];
+    static Object[] items = new Object[SIZE];
     static int front = -1;
     static int rear = -1;
     static boolean isFull() {
@@ -24,8 +24,8 @@ public class ArrayQueue {
             System.out.println("Insert " + element);
         }
     }
-    static int deQueue() {
-        int element;
+    static Object deQueue() {
+        Object element;
         if (isEmpty()) {
             System.out.println("Queue is empty");
             return (-1);

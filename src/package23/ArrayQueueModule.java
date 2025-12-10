@@ -2,15 +2,13 @@ package package23;
 
 public class ArrayQueueModule {
     int SIZE = 5;
-    int[] items = new int[SIZE];
+    Object[] items = new Object[SIZE];
     int front = -1;
     int rear = -1;
 
     public ArrayQueueModule(int SIZE) {
         this.SIZE = SIZE;
     }
-
-
 
     public boolean isFull() {
         return front == 0 && rear == SIZE - 1;
@@ -34,8 +32,8 @@ public class ArrayQueueModule {
         }
     }
 
-    public int deQueue() {
-        int element;
+    public Object deQueue() {
+        Object element;
         if (isEmpty()) {
             System.out.println("Queue is empty");
             return (-1);
