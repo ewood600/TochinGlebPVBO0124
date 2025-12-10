@@ -5,8 +5,6 @@ import java.util.Stack;
 
 import static java.lang.Float.parseFloat;
 
-
-
 public class RPNCalc {
     public static void main(String[] args) {
         Calculate("2 3 + *");

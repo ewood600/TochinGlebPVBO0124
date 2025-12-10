@@ -1,8 +1,6 @@
 package package21;
 
-import package13.Shirt;
 
-import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
