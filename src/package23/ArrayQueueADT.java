@@ -8,15 +8,15 @@ public abstract class ArrayQueueADT {
     private int rear = -1;
 
     public ArrayQueueADT(int SIZE) {
-        this.SIZE = SIZE;
+        this.SIZE = ArrayQueue.SIZE;
     }
 
     public boolean isFull() {
-        return front == 0 && rear == SIZE - 1;
+        return ArrayQueue.front == 0 && ArrayQueue.rear == SIZE - 1;
     }
 
     boolean isEmpty() {
-        return front == -1;
+        return ArrayQueue.front == -1;
     }
 
     public void enQueue(int element) {
@@ -24,11 +24,11 @@ public abstract class ArrayQueueADT {
             System.out.println("Queue is full");
         }
         else {
-            if (front == -1) {
-                front = 0;
+            if (ArrayQueue.front == -1) {
+                ArrayQueue.front = 0;
             }
-            rear++;
-            items[rear] = element;
+            ArrayQueue.rear++;
+            ArrayQueue.items[rear] = element;
             System.out.println("Insert " + element);
         }
     }
@@ -40,13 +40,13 @@ public abstract class ArrayQueueADT {
             return (-1);
         }
         else {
-            element = items[front];
-            if (front >= rear) {
-                front = -1;
-                rear = -1;
+            element = ArrayQueue.items[front];
+            if (ArrayQueue.front >= ArrayQueue.rear) {
+                ArrayQueue.front = -1;
+                ArrayQueue.rear = -1;
             }
             else {
-                front++;
+                ArrayQueue.front++;
             }
             System.out.println( element + " Deleted");
             return (element);
@@ -60,11 +60,11 @@ public abstract class ArrayQueueADT {
         }
         else {
             System.out.println("\nFront index-> " +
-                    front);
+                    ArrayQueue.front);
             System.out.println("Items -> ");
-            for (i = front; i <= rear; i++)
-                System.out.print(items[i] + " ");
-            System.out.println("\nRear index-> " + rear);
+            for (i = ArrayQueue.front; i <= ArrayQueue.rear; i++)
+                System.out.print(ArrayQueue.items[i] + " ");
+            System.out.println("\nRear index-> " + ArrayQueue.rear);
         }
     }
 
